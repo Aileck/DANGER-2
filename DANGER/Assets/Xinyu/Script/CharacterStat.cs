@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class CharacterStat : MonoBehaviour
 {
-    public Texture2D Portrait;
+    public double MaxHp = 100;
+    public double CurrentHp = 75;
 
-    public string ID = "P1";
-    public string Name = "Tu";
-    public int MaxHp = 100;
-    public int CurrentHp = 75;
-
-    public int MaxStress = 100;
-    public int CurrentStress = 50;
+    public double MaxStress = 100;
+    public double CurrentStress = 50;
     public Texture2D StressPicture;
 
-    public int MaxStamina = 100;
-    public int CurrentStamina = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -27,48 +21,60 @@ public class CharacterStat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Check Game Over
+        if (CurrentHp <= 0) {
+            CurrentHp = MaxHp;
+        }
+        CurrentStress += 0.02;
+        if (CurrentStress >= MaxStress)
+        {
+            CurrentHp -= 10;
+            CurrentStress = 0;
+        }
     }
 
 
-    public int GetMaxHp() 
+    public double GetMaxHp() 
     {
         return MaxHp;
     }
 
 
-    public int GetCurrentHp() 
+    public double GetCurrentHp() 
     {
         return CurrentHp;
     }
 
-    public int GetMaxStress()
+    public double GetMaxStress()
     {
         return MaxStress;
     }
 
-    public int GetCurrentStress()
+    public double GetCurrentStress()
     {
         return CurrentStress;
     }
 
-    public int GetMaxStamina()
+
+    public void AddHp(double i) 
     {
-        return MaxStamina;
+        CurrentHp += i;
     }
 
-    public int GetCurrentStamina()
+    public void LossHp(double i)
     {
-        return CurrentStamina;
+        CurrentHp -= i;
     }
 
-    public string GetName()
+    public void AddStress(double i)
     {
-        return Name;
+        CurrentStress += i;
     }
 
-    public string GetID()
+    public void LossStress(double i) 
     {
-        return ID;
+        CurrentHp -= i;
     }
+
+
 }

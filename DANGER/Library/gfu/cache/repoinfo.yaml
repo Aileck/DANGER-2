@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2021-11-12T23:03:44.195+01:00
-  initializedAtString: 2021-11-11T21:16:34.308+01:00
+  lastUpdatedAtString: 2021-11-25T19:42:08.201+01:00
+  initializedAtString: 2021-11-25T19:42:08.201+01:00
   currentGitRemote:
     name: origin
-    url: https://github.com/Nerch5/DANGER-TFG.git
+    url: https://github.com/Aileck/DANGER-2.git
     login: 
     user: 
     host: 
@@ -30,9 +30,9 @@ MonoBehaviour:
     name: main
     remote:
       name: origin
-      url: https://github.com/Nerch5/DANGER-TFG.git
+      url: https://github.com/Aileck/DANGER-2.git
     trackingBranch: main
   currentConfigRemote:
     name: origin
-    url: https://github.com/Nerch5/DANGER-TFG.git
+    url: https://github.com/Aileck/DANGER-2.git
   currentHead: 

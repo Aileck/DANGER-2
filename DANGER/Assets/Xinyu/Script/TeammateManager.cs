@@ -23,7 +23,7 @@ public class TeammateManager : MonoBehaviour
 
         GameObject UIClone = Instantiate(UIOriginal);
         UIClone.SetActive(true);
-        UIs.Add(stat.GetID(),UIClone);
+        //UIs.Add(stat.GetID(),UIClone);
     }
 
     // Update is called once per frame

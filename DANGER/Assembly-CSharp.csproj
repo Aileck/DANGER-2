@@ -70,6 +70,8 @@
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireNode.cs" />
     <Compile Include="Assets\Tools\3DTargetCursor\Scripts\FeedbackPointer.cs" />
     <Compile Include="Assets\Pablo\Scripts\Movement.cs" />
+    <Compile Include="Assets\InfoController.cs" />
+    <Compile Include="Assets\quizController.cs" />
     <Compile Include="Assets\TalkBox.cs" />
     <Compile Include="Assets\Adri爊\Scripts\UI\timer.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\Scripts\Quit.cs" />

@@ -13,31 +13,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2021-11-12T23:03:45.351+01:00
-  initializedAtString: 2021-11-11T21:18:29.859+01:00
-  localBranches:
-  - name: main
-    tracking: origin/main
+  lastUpdatedAtString: 2021-11-25T18:53:09.840+01:00
+  initializedAtString: 2021-11-25T18:53:08.762+01:00
+  localBranches: []
   remoteBranches:
   - name: origin/main
     tracking: '[None]'
   remotes:
   - name: origin
-    url: https://github.com/Nerch5/DANGER-TFG.git
+    url: https://github.com/Aileck/DANGER-2.git
     login: 
     user: 
     host: 
     function: 0
     token: 
   localConfigBranches:
-    keys:
-    - main
-    values:
-    - name: main
-      remote:
-        name: origin
-        url: https://github.com/Nerch5/DANGER-TFG.git
-      trackingBranch: main
+    keys: []
+    values: []
   remoteConfigBranches:
     keys:
     - origin
@@ -49,11 +41,11 @@ MonoBehaviour:
       - name: main
         remote:
           name: origin
-          url: https://github.com/Nerch5/DANGER-TFG.git
+          url: https://github.com/Aileck/DANGER-2.git
         trackingBranch: 
   configRemotes:
     keys:
     - origin
     values:
     - name: origin
-      url: https://github.com/Nerch5/DANGER-TFG.git
+      url: https://github.com/Aileck/DANGER-2.git
