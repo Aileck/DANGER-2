@@ -85,6 +85,7 @@
     <Compile Include="Assets\Water.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireGrassRemover.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
+    <Compile Include="Assets\TemperatureDetector.cs" />
     <Compile Include="Assets\Pablo\Scripts\Exit.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Splash\Scripts\Imagen.cs" />
     <Compile Include="Assets\PyroParticles\Demo\DemoScript.cs" />
@@ -137,7 +138,8 @@
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
     <Compile Include="Assets\TimeController.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Demo\Prefabs\Standard Assets\Utility\FPSCounter.cs" />
-    <Compile Include="Assets\TemperatureDetector.cs" />
+    <Compile Include="Assets\DialogController.cs" />
+    <Compile Include="Assets\wettower.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class QuizExtraInfo : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Una clase simplemente para almacenar informaci¨®n extra de Quiz
     public double[] HPs;
     public Sprite[] portraits;
-    public Items.ItemType[] ItemToCheck;
+    public Items.ItemType[] ItemsToCheck;
+
+    public string infoToShowOnFail;
+    public Sprite pictureToShowOnFail;
 
 
     void Start()
@@ -32,9 +35,18 @@ public class QuizExtraInfo : MonoBehaviour
     }
 
 
-    public Items.ItemType[] ToCheck()
+    public Items.ItemType[] getItemsToCheck()
     {
-        return ItemToCheck;
+        return ItemsToCheck;
     }
 
+    public Sprite getPicture()
+    {
+        return pictureToShowOnFail;
+    }
+
+    public string getInfo()
+    {
+        return infoToShowOnFail;
+    }
 }

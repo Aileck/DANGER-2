@@ -8,25 +8,39 @@ using UnityEngine.UI;
 
 public class quizController : MonoBehaviour
 {
-
+    //HUD de sí mismo y HUD principal
     private Canvas canvas;
     private Canvas statUI;
+    private Canvas dialogUI;
 
+
+    //Pregunta y opción
     public Text quiz;
     public Button OptionA;
     public Button OptionB;
     public Button OptionC;
 
+
+    //Info personaje
     public GameObject player;
     public CharacterStat playerStat;
 
+    //Control tiempo
     public Text countDownText;
     private string countDownString;
     private TimeController timeController;
 
+    //Control información extra
     public GameObject otherPanel;
     public Text[] extraCountDown;
     public Image[] extraPortrait;
+    public Items.ItemType[] extraResquestItem;
+    private string infoToShow;
+    private Sprite pictureToShow;
+
+    private int resquestItemNum = 0;
+    private int remainPeoples = 0;
+    
 
     public enum QuizType
     {
@@ -50,11 +64,17 @@ public class quizController : MonoBehaviour
     void Start()
     {
         canvas = GetComponent<Canvas>();
+        statUI = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<Canvas>();
+        timeController = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<TimeController>();
+        
+        dialogUI = GameObject.FindGameObjectWithTag("DialogUI").GetComponent<Canvas>();
+
         player = GameObject.FindGameObjectWithTag("Player");
         playerStat = player.GetComponent<CharacterStat>();
 
-        statUI = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<Canvas>();
-        timeController = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<TimeController>();
+        extraResquestItem = new Items.ItemType[8];
+
+
     }
     
     // Update is called once per frame
@@ -78,7 +98,6 @@ public class quizController : MonoBehaviour
 
         if (qt == QuizType.QUIZ)
             SetCorrectOption(correctOption);
-
         else if (qt == QuizType.ASK)
             SetChoice(correctOption);
 
@@ -86,16 +105,31 @@ public class quizController : MonoBehaviour
             otherPanel.SetActive(true);
             double[] hps = extra.getHps();
             Sprite[] sps = extra.getPortraits();
+            Items.ItemType[] its = extra.getItemsToCheck();
+            infoToShow = extra.getInfo();
+            pictureToShow = extra.getPicture();
+
+
+            remainPeoples = hps.Length;
             int i;
             for (i = 0; i < hps.Length; i++)
             {
-                extraCountDown[i].text = hps[i].ToString();
+                //CountDown de otros gentes
+                StartCoroutine(Time(hps[i], extraCountDown[i]));
                 extraPortrait[i].sprite = sps[i];
+
             }
+            //Poner vacio a los demás
             while (i < extraCountDown.Length) {
                 extraCountDown[i].enabled = false;
                 extraPortrait[i].enabled = false;
                 i++;
+            }
+
+            for (int j = 0; j < its.Length; j++)
+            {
+                resquestItemNum++;
+                extraResquestItem[j] = its[j];
             }
         }
     }
@@ -169,6 +203,26 @@ public class quizController : MonoBehaviour
 
     void Correct()
     {
+        //Comprobar si hay cosa que requiere
+        if (resquestItemNum > 0) 
+        {
+            List<Items.ItemType> actualItem = playerStat.GetItemList();
+            bool found = true;
+            Debug.Log(resquestItemNum);
+            for (int i = 0; i < resquestItemNum; i++){
+                if (!actualItem.Contains(extraResquestItem[i]))
+                    found = false;
+            }
+
+            if (found == false)
+            {
+                setCanvasActive(false);
+                dialogUI.enabled = true;
+                dialogUI.GetComponent<DialogController>().text.text = infoToShow;
+                dialogUI.GetComponent<DialogController>().image.sprite = pictureToShow;
+                remainPeoples = 0;
+            }
+        }
 
         setDefault();
         setCanvasActive(false);
@@ -186,6 +240,21 @@ public class quizController : MonoBehaviour
         OptionA.onClick.RemoveAllListeners();
         OptionB.onClick.RemoveAllListeners();
         OptionC.onClick.RemoveAllListeners();
+
+        resquestItemNum = 0;
+        remainPeoples = 0;
+
+        StopAllCoroutines();
+        for (int i = 0; i < extraCountDown.Length; i++)
+        {
+            extraCountDown[i].enabled = true;
+            extraPortrait[i].enabled = true;
+        }
+        otherPanel.SetActive(false);
+
+
+
+
     }
 
     public void setCanvasActive(bool active) 
@@ -193,5 +262,15 @@ public class quizController : MonoBehaviour
         canvas.enabled = active;
     }
 
-
+    IEnumerator Time(double time , Text label)
+    {
+        while (time >= 0)
+        {
+            TimeSpan ts = TimeSpan.FromSeconds(time);
+            label.text = ts.ToString(@"mm\:ss");
+            yield return new WaitForSeconds(1);
+            time--;
+        }
+        remainPeoples--;
+    }
 }

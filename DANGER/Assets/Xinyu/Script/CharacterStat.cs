@@ -27,8 +27,6 @@ public class CharacterStat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Current Stress " + StressGainPerFrame);
-        Debug.Log("Current HP " + HpLostPerFrame);
         //Check Game Over
         if (CurrentHp <= 0) {
             CurrentHp = MaxHp;
@@ -64,6 +62,11 @@ public class CharacterStat : MonoBehaviour
     public double GetCurrentStress()
     {
         return CurrentStress;
+    }
+
+    public List<Items.ItemType> GetItemList()
+    {
+        return ItemList;
     }
 
 
