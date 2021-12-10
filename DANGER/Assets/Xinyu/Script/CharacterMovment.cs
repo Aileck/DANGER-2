@@ -7,11 +7,9 @@ public class CharacterMovment : MonoBehaviour
 {
 
 
-    public NavMeshAgent agent; //Libreria AI, para encontrar camino
-    public Animator animator;
-    public Light selectLight;
-
-    public GameObject selectCircle;
+    private NavMeshAgent agent; //Libreria AI, para encontrar camino
+    private Animator animator;
+    private Light selectLight;
 
     public bool underControl;
 
@@ -23,10 +21,10 @@ public class CharacterMovment : MonoBehaviour
         selectLight = GetComponent<Light>();
 
         //Crea instancia de circulo indicador de actividad
-        GameObject circleInstance = Instantiate(GameObject.FindGameObjectWithTag("TeamUI"));
-        circleInstance.transform.SetParent(this.transform);
-        circleInstance.transform.localPosition = Vector3.zero;
-        selectCircle = circleInstance;
+        //GameObject circleInstance = Instantiate(GameObject.FindGameObjectWithTag("TeamUI"));
+        //circleInstance.transform.SetParent(this.transform);
+        //circleInstance.transform.localPosition = Vector3.zero;
+        //selectCircle = circleInstance;
     }
 
     // Update is called once per frame
@@ -36,7 +34,7 @@ public class CharacterMovment : MonoBehaviour
         if (underControl)
         {
             selectLight.intensity = 1;
-            selectCircle.SetActive(true);
+
 
             if (!agent.hasPath)
                 animator.SetBool("Walk", false);
@@ -51,7 +49,7 @@ public class CharacterMovment : MonoBehaviour
         else {
             //Quitar indicador de actividad
             selectLight.intensity = 0;
-            selectCircle.SetActive(false);
+
         }
 
     }
@@ -64,11 +62,14 @@ public class CharacterMovment : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.gameObject.tag == "Terrain")
-            {
+            //if (hit.collider.gameObject.tag == "Terrain" || hit.collider.gameObject.tag == "DangerFire" || hit.collider.gameObject.tag == "Fire")
+            //{
                 agent.SetDestination(hit.point);
                 transform.LookAt(hit.point);
-            }
+            //}
+
         }
     }
+
+
 }

@@ -6,15 +6,17 @@ using UnityEngine.UI;
 public class GetStress : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject SomeOne;
+    private GameObject SomeOne;
     private CharacterStat Stat;
 
-    public Slider Scrollbar;
+    private  Slider Scrollbar;
 
     // Start is called before the first frame update
     void Start()
     {
+        SomeOne = GameObject.FindGameObjectWithTag("Player");
         Stat = SomeOne.GetComponent<CharacterStat>();
+        Scrollbar = GetComponent<Slider>();
     }
 
     // Update is called once per frame

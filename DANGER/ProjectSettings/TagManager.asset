@@ -15,11 +15,15 @@ TagManager:
   - Extinguiser
   - Terrain
   - TeamUI
+  - QuizUI
+  - ItemImage
+  - DangerFire
+  - OtherPanel
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - FireLayer
   - Water
   - UI
   - Ignore Map
