@@ -10,6 +10,10 @@ public class QuizExtraInfo : MonoBehaviour
     public Sprite[] portraits;
     public Items.ItemType[] ItemsToCheck;
 
+    public int timeToLoss;
+    public float hearthToLoss;
+    public float stressToLoss;
+
     public string infoToShowOnFail;
     public Sprite pictureToShowOnFail;
 

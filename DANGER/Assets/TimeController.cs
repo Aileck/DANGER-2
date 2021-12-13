@@ -40,6 +40,11 @@ public class TimeController : MonoBehaviour
         CurrentTime += time;
     }
 
+    public void LossTime(int time)
+    {
+        CurrentTime -= time;
+    }
+
     public string getCountDownString()
     {
         return CountDownString;

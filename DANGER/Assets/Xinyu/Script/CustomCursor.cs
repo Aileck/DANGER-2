@@ -27,6 +27,7 @@ public class CustomCursor : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
             Destroy(GetComponent<CustomCursor>());
 
 

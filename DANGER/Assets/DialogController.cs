@@ -10,9 +10,12 @@ public class DialogController : MonoBehaviour
     public Image image;
     public Text text;
     public Button button;
+
+    private Canvas teamUI;
     void Start()
     {
         button.onClick.AddListener(Ok);
+        teamUI = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<Canvas>();
     }
 
     // Update is called once per frame
@@ -23,6 +26,9 @@ public class DialogController : MonoBehaviour
 
     void Ok()
     {
+        Debug.Log("Ohhh");
         GetComponent<Canvas>().enabled = false;
+        teamUI.enabled = true;
     }
+
 }

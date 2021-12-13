@@ -1,14 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoorManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject door;
+    public QuizExtraInfo extraInfo;
+
+    private CharacterStat stat;
+    private Canvas teamUI;
+    private TimeController timeController;
+    private Canvas dialogController;
     void Start()
     {
-
+        if (extraInfo != null)
+        {
+            stat = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStat>();
+            teamUI = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<Canvas>();
+            timeController = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<TimeController>();
+            dialogController = GameObject.FindGameObjectWithTag("DialogUI").GetComponent<Canvas>();
+        }
     }
 
 
@@ -22,6 +35,21 @@ public class DoorManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+            GetComponent<CustomCursor>().enabled = false;
+
+            if (extraInfo != null)
+            {
+                teamUI.enabled = false;
+                dialogController.GetComponent<DialogController>().text.text = extraInfo.infoToShowOnFail;
+
+                stat.LossHp(extraInfo.hearthToLoss);
+                stat.LossStress(extraInfo.stressToLoss);
+                timeController.LossTime(extraInfo.timeToLoss);
+
+                dialogController.enabled = true;
+            }
 
             door.SetActive(false);
 
