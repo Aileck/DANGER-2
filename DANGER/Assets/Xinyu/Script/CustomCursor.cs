@@ -22,12 +22,12 @@ public class CustomCursor : MonoBehaviour
 
     void OnMouseEnter()
     {
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        if(GetComponent<CustomCursor>().isActiveAndEnabled)
+            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
 
         if (Input.GetMouseButtonDown(1))
         {
-            //Posici車n bot車n
-            Debug.Log("Tengo sed...");
+            Destroy(GetComponent<CustomCursor>());
 
 
         }
@@ -44,8 +44,7 @@ public class CustomCursor : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             //Posici車n bot車n
-            Debug.Log("Tengo sed...");
-
+            
 
         }
     }

@@ -32,7 +32,7 @@ public class CharacterStat : MonoBehaviour
             CurrentHp = MaxHp;
         }
 
-        CurrentStress += StressGainPerFrame;
+        CurrentStress -= StressGainPerFrame;
         CurrentHp -= HpLostPerFrame;
 
         if (CurrentStress >= MaxStress)

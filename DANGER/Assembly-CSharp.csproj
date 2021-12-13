@@ -62,6 +62,7 @@
     <Compile Include="Assets\Adri爊\Scripts\LevelCreation\CubeObjects.cs" />
     <Compile Include="Assets\Xinyu\Script\CharacterMovment.cs" />
     <Compile Include="Assets\Pablo\Scripts\NpcAI.cs" />
+    <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireBox.cs" />
     <Compile Include="Assets\Adri爊\Sounds\PlayerSounds.cs" />
     <Compile Include="Assets\Pablo\Scripts\RayCast.cs" />
@@ -96,13 +97,16 @@
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Splash\Scripts\ImgFondo.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\Scripts\MusicaEntreScenes.cs" />
+    <Compile Include="Assets\DialogController.cs" />
     <Compile Include="Assets\GetHp.cs" />
+    <Compile Include="Assets\StressController.cs" />
     <Compile Include="Assets\Xinyu\Script\Items.cs" />
     <Compile Include="Assets\Adri爊\Scripts\LevelCreation\ObjectDrop.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireCell.cs" />
     <Compile Include="Assets\FireAlarm.cs" />
     <Compile Include="Assets\Pablo\Scripts\Map.cs" />
     <Compile Include="Assets\Asset  Store\KY_effects\Script\ConGUI.cs" />
+    <Compile Include="Assets\wettower.cs" />
     <Compile Include="Assets\Miguel.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Options\OptionsMenu.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireManager.cs" />
@@ -137,9 +141,18 @@
     <Compile Include="Assets\Tools\3DTargetCursor\Scripts\ShowFeedbackPointer.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
     <Compile Include="Assets\TimeController.cs" />
-    <Compile Include="Assets\Pablo\FirePropagation\Demo\Prefabs\Standard Assets\Utility\FPSCounter.cs" />
-    <Compile Include="Assets\DialogController.cs" />
-    <Compile Include="Assets\wettower.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+    <Compile Include="Assets\DoorManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -151,6 +164,7 @@
      <None Include="Assets\Pablo\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\Firebase 1\Firebase\Plugins\Firebase.App.dll" />
      <None Include="Assets\Firebase 1\Parse\Plugins\Unity.Tasks.dll" />
+     <None Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />

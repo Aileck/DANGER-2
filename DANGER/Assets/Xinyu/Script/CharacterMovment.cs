@@ -64,6 +64,7 @@ public class CharacterMovment : MonoBehaviour
         {
             //if (hit.collider.gameObject.tag == "Terrain" || hit.collider.gameObject.tag == "DangerFire" || hit.collider.gameObject.tag == "Fire")
             //{
+            Debug.Log("Vamos!");
                 agent.SetDestination(hit.point);
                 transform.LookAt(hit.point);
             //}
