@@ -15,7 +15,9 @@ public class FireAlarm : MonoBehaviour
     {
         TeammateManager = GameObject.FindGameObjectWithTag("TeamUI").GetComponentInChildren<TeammateManager>();
         player = GameObject.FindGameObjectWithTag("Player");
-        AS = GetComponent<AudioSource>();
+        
+        if(GetComponent<AudioSource>() != null)
+            AS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

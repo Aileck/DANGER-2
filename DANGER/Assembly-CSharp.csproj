@@ -60,6 +60,7 @@
     <Compile Include="Assets\Adri爊\Scripts\LevelCreation\ObjectCreation.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireNodeChain.cs" />
     <Compile Include="Assets\Adri爊\Scripts\LevelCreation\CubeObjects.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Xinyu\Script\CharacterMovment.cs" />
     <Compile Include="Assets\Pablo\Scripts\NpcAI.cs" />
     <Compile Include="Assets\CameraController.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\InfoController.cs" />
     <Compile Include="Assets\quizController.cs" />
     <Compile Include="Assets\TalkBox.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Adri爊\Scripts\UI\timer.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\Scripts\Quit.cs" />
     <Compile Include="Assets\Xinyu\Script\ClickEvent.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\Scripts\AnimatorFunctions.cs" />
     <Compile Include="Assets\Pablo\Scripts\FireGeneration.cs" />
     <Compile Include="Assets\Pablo\Scripts\RemainingNPC.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireVisualManager.cs" />
     <Compile Include="Assets\Water.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireGrassRemover.cs" />
@@ -107,6 +110,7 @@
     <Compile Include="Assets\Pablo\Scripts\Map.cs" />
     <Compile Include="Assets\Asset  Store\KY_effects\Script\ConGUI.cs" />
     <Compile Include="Assets\wettower.cs" />
+    <Compile Include="Assets\DoorManager.cs" />
     <Compile Include="Assets\Miguel.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Options\OptionsMenu.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireManager.cs" />
@@ -118,21 +122,29 @@
     <Compile Include="Assets\Adri爊\Scripts\UI\ItemsPage.cs" />
     <Compile Include="Assets\Pablo\Scripts\SliderScripts.cs" />
     <Compile Include="Assets\Pablo\Scripts\GlobalVar.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
     <Compile Include="Assets\Xinyu\Script\TeammateManager.cs" />
     <Compile Include="Assets\Adri爊\Menus\Credits\Credits.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
     <Compile Include="Assets\Pablo\Scripts\TextController.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
     <Compile Include="Assets\Pablo\Scripts\RoomPopulator.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
     <Compile Include="Assets\Pablo\Scripts\AgentMovement.cs" />
     <Compile Include="Assets\ChangeTo.cs" />
     <Compile Include="Assets\Adri爊\Scripts\LevelCreation\DBManager.cs" />
     <Compile Include="Assets\Adri爊\Scripts\UI\ItemsButton.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\destroymusic.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
     <Compile Include="Assets\Xinyu\Script\QuizExtraInfo.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\Scripts\btnFunctions.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\Scripts\btnFX.cs" />
     <Compile Include="Assets\ShowLabel.cs" />
+    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
     <Compile Include="Assets\Pablo\Scripts\TotalNPC.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireTerrainTexture.cs" />
@@ -141,18 +153,7 @@
     <Compile Include="Assets\Tools\3DTargetCursor\Scripts\ShowFeedbackPointer.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
     <Compile Include="Assets\TimeController.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-    <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
-    <Compile Include="Assets\DoorManager.cs" />
+    <Compile Include="Assets\getItem.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

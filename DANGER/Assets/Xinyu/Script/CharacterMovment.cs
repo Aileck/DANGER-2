@@ -26,7 +26,7 @@ public class CharacterMovment : MonoBehaviour
 
         if (underControl)
         {
-            Debug.Log(underControl);
+
             if (!agent.hasPath)
                 animator.SetBool("Walk", false);
             else
@@ -37,9 +37,10 @@ public class CharacterMovment : MonoBehaviour
                 Move();
             }
         }
-        else {
+        else
+        {
             //Quieto xd
-
+            //agent.SetDestination(transform.position);
 
         }
 

@@ -8,12 +8,12 @@ public class CharacterStat : MonoBehaviour
     public GameObject TemperatureDetector;
 
     public double MaxHp = 100;
-    public double CurrentHp = 75;
-    private double HpLostPerFrame = 0;
+    public double CurrentHp = 100;
+    private double HpLostPerFrame = 0.001;
 
     public double MaxStress = 100;
-    public double CurrentStress = 50;
-    private double StressGainPerFrame = 0.015;
+    public double CurrentStress = 100;
+    private double StressGainPerFrame = 0.003;
 
     private List<Items.ItemType> ItemList = new List<Items.ItemType>();
 
@@ -87,14 +87,15 @@ public class CharacterStat : MonoBehaviour
 
     public void LossStress(double i) 
     {
-        CurrentHp -= i;
+        CurrentStress -= i;
     }
 
     public void addItem(Items.ItemType it)
     {
         ItemList.Add(it);
-        if (it == Items.ItemType.ALARM)
+        if (it == Items.ItemType.WET_TOWEL)
         {
+            HpLostPerFrame -= 0.005;
             StressGainPerFrame -= 0.005;
         }
     }
@@ -112,15 +113,16 @@ public class CharacterStat : MonoBehaviour
         {
             TemperatureDetector.GetComponent<MeshRenderer>().enabled = true;
             TemperatureDetector.GetComponent<TemperatureDetector>().ChangeMaterialRed();
-            HpLostPerFrame += 0.015;
-            StressGainPerFrame += 0.015;
+            HpLostPerFrame += 0.005;
+            StressGainPerFrame += 0.003;
 
         }
         else if (other.tag == "DangerFire")
         {
             TemperatureDetector.GetComponent<MeshRenderer>().enabled = true;
             TemperatureDetector.GetComponent<TemperatureDetector>().ChangeMaterialOrange();
-            StressGainPerFrame += 0.005;
+            HpLostPerFrame += 0.002;
+            StressGainPerFrame += 0.002;
         }
     }
 
@@ -128,17 +130,18 @@ public class CharacterStat : MonoBehaviour
     {
         if (other.tag == "Fire")
         {
-            Debug.Log("Sale de fueg9");
+
             TemperatureDetector.GetComponent<TemperatureDetector>().ChangeMaterialOrange();
-            HpLostPerFrame -= 0.015;
-            StressGainPerFrame -= 0.015;
+            HpLostPerFrame -= 0.005;
+            StressGainPerFrame -= 0.003;
 
         }
         else if (other.tag == "DangerFire")
         {
-            Debug.Log("Sale de peligto");
+
             TemperatureDetector.GetComponent<MeshRenderer>().enabled = false;
-            StressGainPerFrame -= 0.005;
+            HpLostPerFrame -= 0.002;
+            StressGainPerFrame -= 0.002;
 
         }
     }

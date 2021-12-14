@@ -2550,6 +2550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7337692065969818878, guid: 4d48bdf6b827f8049a6a2c31dad29a47, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7337692065969818879, guid: 4d48bdf6b827f8049a6a2c31dad29a47, type: 3}
       propertyPath: m_Pivot.x
       value: 0
