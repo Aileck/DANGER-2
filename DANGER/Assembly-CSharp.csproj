@@ -68,6 +68,7 @@
     <Compile Include="Assets\Adri爊\Sounds\PlayerSounds.cs" />
     <Compile Include="Assets\Pablo\Scripts\RayCast.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
+    <Compile Include="Assets\GetItem.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Demo\Scripts\UserGUI.cs" />
     <Compile Include="Assets\Adri爊\Scripts\LevelCreation\Game.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireNode.cs" />
@@ -153,7 +154,9 @@
     <Compile Include="Assets\Tools\3DTargetCursor\Scripts\ShowFeedbackPointer.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
     <Compile Include="Assets\TimeController.cs" />
-    <Compile Include="Assets\getItem.cs" />
+    <Compile Include="Assets\Question.cs" />
+    <Compile Include="Assets\StartQuizEvent.cs" />
+    <Compile Include="Assets\EventoSmoke.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
