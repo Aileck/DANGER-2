@@ -20,6 +20,7 @@ TagManager:
   - DangerFire
   - OtherPanel
   - DialogUI
+  - SceneOneControl
   layers:
   - Default
   - TransparentFX

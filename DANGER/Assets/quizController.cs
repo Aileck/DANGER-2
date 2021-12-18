@@ -13,8 +13,11 @@ public class quizController : MonoBehaviour
     private Canvas statUI;
     private Canvas dialogUI;
 
+    private SceneOneControl sceneControl;
+
 
     //Pregunta y opción
+    public int id;
     public Text quiz;
     public Button OptionA;
     public Button OptionB;
@@ -37,10 +40,16 @@ public class quizController : MonoBehaviour
     public Items.ItemType[] extraResquestItem;
     private string infoToShow;
     private Sprite pictureToShow;
+    private float hpToLoss;
+    private float stressToLoss;
+    private int TimeToLoss;
 
     private int resquestItemNum = 0;
     private int remainPeoples = 0;
-    
+    private int attempts;
+
+
+
 
     public enum QuizType
     {
@@ -50,7 +59,7 @@ public class quizController : MonoBehaviour
 
 
     //
-    //Usar SetQuiz(string quiz,string optionA,string optionB,string optionC,int correctOption,QuizExtraInfo extr) para ->
+    //Usar SetQuiz(int id,string quiz,string optionA,string optionB,string optionC,int correctOption,QuizExtraInfo extr) para ->
     //-----------------------------------------
     //|             [quiz]                    |
     //|optionA - correcto si correctOption = 1|
@@ -66,7 +75,8 @@ public class quizController : MonoBehaviour
         canvas = GetComponent<Canvas>();
         statUI = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<Canvas>();
         timeController = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<TimeController>();
-        
+        sceneControl = GameObject.FindGameObjectWithTag("SceneOneControl").GetComponent<SceneOneControl>();
+
         dialogUI = GameObject.FindGameObjectWithTag("DialogUI").GetComponent<Canvas>();
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -83,13 +93,14 @@ public class quizController : MonoBehaviour
 
         countDownString = timeController.getCountDownString();
         countDownText.text = countDownString;
+        //statUI.enabled = !GetComponent<Canvas>().isActiveAndEnabled;
 
     }
 
-    public void SetQuiz(string quiz,string optionA,string optionB,string optionC,int correctOption,QuizExtraInfo extra,QuizType qt = QuizType.QUIZ)
+    public void SetQuiz(int questionID,string quiz,string optionA,string optionB,string optionC,int correctOption,QuizExtraInfo extra,QuizType qt = QuizType.QUIZ)
     {
+        id = questionID;
         statUI.enabled = false;
-
         this.quiz.text = quiz;
 
         SetOptionA(optionA);
@@ -102,6 +113,9 @@ public class quizController : MonoBehaviour
             SetChoice(correctOption);
 
         if (extra != null) {
+            hpToLoss = extra.hearthToLoss;
+            stressToLoss = extra.stressToLoss;
+            TimeToLoss = extra.timeToLoss;
             otherPanel.SetActive(true);
             double[] hps = extra.getHps();
             Sprite[] sps = extra.getPortraits();
@@ -217,11 +231,41 @@ public class quizController : MonoBehaviour
             if (found == false)
             {
                 setCanvasActive(false);
-                dialogUI.enabled = true;
                 dialogUI.GetComponent<DialogController>().text.text = infoToShow;
                 dialogUI.GetComponent<DialogController>().image.sprite = pictureToShow;
+                dialogUI.GetComponent<DialogController>().enableDialog();
+
+                playerStat.LossHp(hpToLoss);
+                playerStat.LossStress(stressToLoss);
+                timeController.LossTime(TimeToLoss);
                 remainPeoples = 0;
             }
+        }
+
+        if (id == 1)
+        {
+            sceneControl.quizOneAnswered = true;
+            if (attempts == 0) sceneControl.quizOneCorrect = true; 
+        }
+        else if (id == 2) 
+        {
+            sceneControl.quizTwoAnsewed = true;
+            if (attempts == 0) sceneControl.quizTwoCorrect = true;
+        }
+        else if (id == 3)
+        {
+            sceneControl.quizThreeAnswered = true;
+            if (attempts == 0) sceneControl.quizThreeCorrect = true;
+        }
+        else if (id == 4) 
+        {
+            sceneControl.quizFourAnswered = true;
+            if (attempts == 0) sceneControl.quizFourCorrect = true;
+        }
+        else if (id == 5) 
+        {
+            sceneControl.quzFiveAnswered = true;
+            if (attempts == 0) sceneControl.quizFiveCorrect = true;
         }
 
         setDefault();
@@ -231,7 +275,8 @@ public class quizController : MonoBehaviour
 
     void Incorrect()
     {
-        playerStat.AddStress(20);
+        playerStat.LossStress(5);
+        attempts++;
     }
 
 
@@ -243,6 +288,11 @@ public class quizController : MonoBehaviour
 
         resquestItemNum = 0;
         remainPeoples = 0;
+        attempts = 0;
+
+        hpToLoss = 0;
+        stressToLoss = 0;
+        TimeToLoss = 0;
 
         StopAllCoroutines();
         for (int i = 0; i < extraCountDown.Length; i++)
@@ -251,9 +301,6 @@ public class quizController : MonoBehaviour
             extraPortrait[i].enabled = true;
         }
         otherPanel.SetActive(false);
-
-
-
 
     }
 

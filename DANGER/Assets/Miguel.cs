@@ -47,7 +47,7 @@ public class Miguel : MonoBehaviour
             string optionC = "Apretar la palanca";
             int coorect = 1;
 
-            quiz.SetQuiz(quistion, optionA, optionB, optionC,coorect,quizExtraInfo);
+            //quiz.SetQuiz(id,quistion, optionA, optionB, optionC,coorect,quizExtraInfo);
 
         }
     }

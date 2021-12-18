@@ -60,6 +60,7 @@
     <Compile Include="Assets\Adri爊\Scripts\LevelCreation\ObjectCreation.cs" />
     <Compile Include="Assets\Pablo\FirePropagation\Scripts\FireNodeChain.cs" />
     <Compile Include="Assets\Adri爊\Scripts\LevelCreation\CubeObjects.cs" />
+    <Compile Include="Assets\StartQuizEvent.cs" />
     <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Xinyu\Script\CharacterMovment.cs" />
     <Compile Include="Assets\Pablo\Scripts\NpcAI.cs" />
@@ -140,7 +141,9 @@
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\destroymusic.cs" />
     <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
+    <Compile Include="Assets\Question.cs" />
     <Compile Include="Assets\Xinyu\Script\QuizExtraInfo.cs" />
+    <Compile Include="Assets\EventoSmoke.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\Scripts\btnFunctions.cs" />
     <Compile Include="Assets\Industrial Sign Pack\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
     <Compile Include="Assets\Adri爊\Menus\Main Menu\Menu Principal\Scripts\btnFX.cs" />
@@ -154,9 +157,9 @@
     <Compile Include="Assets\Tools\3DTargetCursor\Scripts\ShowFeedbackPointer.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
     <Compile Include="Assets\TimeController.cs" />
-    <Compile Include="Assets\Question.cs" />
-    <Compile Include="Assets\StartQuizEvent.cs" />
-    <Compile Include="Assets\EventoSmoke.cs" />
+    <Compile Include="Assets\SceneOneControl.cs" />
+    <Compile Include="Assets\CustumeDoor.cs" />
+    <Compile Include="Assets\CustumeDoor2.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

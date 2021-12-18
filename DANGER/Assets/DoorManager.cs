@@ -33,7 +33,7 @@ public class DoorManager : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && this.isActiveAndEnabled)
         {
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<BoxCollider>().enabled = false;
@@ -48,7 +48,7 @@ public class DoorManager : MonoBehaviour
                 stat.LossStress(extraInfo.stressToLoss);
                 timeController.LossTime(extraInfo.timeToLoss);
 
-                dialogController.enabled = true;
+                dialogController.GetComponent<DialogController>().enableDialog();
             }
 
             door.SetActive(false);

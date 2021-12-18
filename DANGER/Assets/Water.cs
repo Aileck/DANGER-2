@@ -31,7 +31,7 @@ public class Water : MonoBehaviour
             string optionC = "C.Iuuu la palanca";
             int coorect = 1;
 
-            quiz.SetQuiz(quistion, optionA, optionB, optionC, coorect, null);
+            //quiz.SetQuiz(quistion, optionA, optionB, optionC, coorect, null);
 
         }
     }

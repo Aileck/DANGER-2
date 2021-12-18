@@ -14,7 +14,6 @@ public class DialogController : MonoBehaviour
     private Canvas teamUI;
     void Start()
     {
-        Debug.Log("Sat");
         button.onClick.AddListener(Ok);
         teamUI = GameObject.FindGameObjectWithTag("TeamUI").GetComponent<Canvas>();
     }
@@ -22,14 +21,18 @@ public class DialogController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        teamUI.enabled = !GetComponent<Canvas>().isActiveAndEnabled;
+
     }
 
     void Ok()
     {
-        Debug.Log("Ohhh");
         GetComponent<Canvas>().enabled = false;
         teamUI.enabled = true;
+    }
+
+    public void enableDialog(){
+        GetComponent<Canvas>().enabled = true;
+        teamUI.enabled = false;
     }
 
 }

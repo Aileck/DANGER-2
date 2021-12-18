@@ -25,7 +25,8 @@ public class TeammateManager : MonoBehaviour
     {
         //Si desaparece hud, personaje no pude mover
         GameObject.FindGameObjectWithTag("Player").GetComponent<NavMeshAgent>().enabled = GetComponent<Canvas>().isActiveAndEnabled;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovment>().underControl = GetComponent<Canvas>().isActiveAndEnabled;
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovment>().enabled = GetComponent<Canvas>().isActiveAndEnabled;
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovment>().underControl = GetComponent<Canvas>().isActiveAndEnabled;
     }
 
     void Awake()
