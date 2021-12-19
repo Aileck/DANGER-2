@@ -8,6 +8,9 @@ using System;
 public class TeammateManager : MonoBehaviour
 {
     public Image[] images;
+    public Text teamNumberText;
+
+    public int teamNumber;
 
 
     //public Dictionary<Items.ItemType, Image> imagesDict = new Dictionary<Items.ItemType, Image>();
@@ -15,9 +18,8 @@ public class TeammateManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-
+        //++Protagonista
+        teamNumber = 1;
     }
 
     // Update is called once per frame
@@ -25,8 +27,7 @@ public class TeammateManager : MonoBehaviour
     {
         //Si desaparece hud, personaje no pude mover
         GameObject.FindGameObjectWithTag("Player").GetComponent<NavMeshAgent>().enabled = GetComponent<Canvas>().isActiveAndEnabled;
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovment>().enabled = GetComponent<Canvas>().isActiveAndEnabled;
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovment>().underControl = GetComponent<Canvas>().isActiveAndEnabled;
+        teamNumberText.text = teamNumber.ToString();
     }
 
     void Awake()

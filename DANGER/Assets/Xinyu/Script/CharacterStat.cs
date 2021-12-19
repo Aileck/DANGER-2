@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class CharacterStat : MonoBehaviour
@@ -17,19 +18,22 @@ public class CharacterStat : MonoBehaviour
 
     private List<Items.ItemType> ItemList = new List<Items.ItemType>();
 
+    SceneOneControl sceneOne;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        sceneOne = GameObject.FindGameObjectWithTag("SceneOneControl").GetComponent<SceneOneControl>();     
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneManager.LoadScene("Menu Principal");
+        }
         //Check Game Over
         if (CurrentHp <= 0) {
-            CurrentHp = MaxHp;
+            SceneManager.LoadScene("GameOver");
         }
 
         CurrentStress -= StressGainPerFrame;
@@ -123,6 +127,8 @@ public class CharacterStat : MonoBehaviour
             TemperatureDetector.GetComponent<TemperatureDetector>().ChangeMaterialOrange();
             HpLostPerFrame += 0.002;
             StressGainPerFrame += 0.002;
+
+            sceneOne.avoidFire = false;
         }
     }
 

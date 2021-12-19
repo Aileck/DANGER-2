@@ -18,6 +18,10 @@ public class QuizExtraInfo : MonoBehaviour
     public Sprite pictureToShowOnFail;
 
 
+    //ID de puerta, para controlar comportamiento
+    public int doorID;
+
+
     void Start()
     {
         
