@@ -1824,8 +1824,8 @@ MonoBehaviour:
   answered: 0
   id: 3
   quistion: "\xBFC\xF3mo ayudar una victima en llamas?"
-  optionA: "A.Hacer que  la vida victima corra lo m\xE1s r\xE1pido posible."
-  optionB: B.Hacer que se tire y ruede por el suelo
+  optionA: "A.Hacer que la victima corra lo m\xE1s r\xE1pido posible."
+  optionB: B.Hacer que se tire y ruede por el suelo.
   optionC: C.Hacer que mantenga la calma y esperar que se apague la prenda.
   quizExtraInfo: {fileID: 283305006}
   correcto: 2
@@ -4664,7 +4664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a87a53b996c2d6a4782bff6305722eb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.32
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a87a53b996c2d6a4782bff6305722eb1, type: 3}
       propertyPath: m_LocalPosition.z

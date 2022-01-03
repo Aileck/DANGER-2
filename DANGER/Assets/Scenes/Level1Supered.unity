@@ -4409,7 +4409,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1129397686}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.05983898
+  m_Size: 0.04556081
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4827,7 +4827,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Has cubrido v\xEDas respiratorias con un pa\xF1uelo h\xFAmedo"
+  m_Text: "Has cubierto v\xEDas respiratorias con un pa\xF1uelo h\xFAmedo."
 --- !u!222 &1137982216
 CanvasRenderer:
   m_ObjectHideFlags: 0
