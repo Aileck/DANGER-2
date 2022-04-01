@@ -73,7 +73,7 @@ public class GetItem : MonoBehaviour
                         //Si no tiene toalla
                         if (!player.GetComponent<CharacterStat>().GetItemList().Contains(Items.ItemType.TOWEL))
                         {
-                            dialog.GetComponent<DialogController>().text.text = "Una dispensador de agua.";
+                            dialog.GetComponent<DialogController>().text.text = "Un dispensador de agua.";
                             dialog.enabled = true;
                         }
                         else

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7420406827793114673, guid: d0f3cbd64011cf54ba32345bcf917e75, type: 3}
       propertyPath: m_Name
-      value: DangerFire
+      value: DangerFire Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7420406827793114677, guid: d0f3cbd64011cf54ba32345bcf917e75, type: 3}
       propertyPath: m_RootOrder
@@ -53,6 +53,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420406827793114677, guid: d0f3cbd64011cf54ba32345bcf917e75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420406828096717702, guid: d0f3cbd64011cf54ba32345bcf917e75, type: 3}
+      propertyPath: m_Range
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7420406828096717702, guid: d0f3cbd64011cf54ba32345bcf917e75, type: 3}
+      propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

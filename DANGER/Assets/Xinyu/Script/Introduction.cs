@@ -32,4 +32,8 @@ public class Introduction : MonoBehaviour
         }
     
     }
+    
+    public void ToEnd() {
+        SceneManager.LoadScene("AdventureScene");
+    }
 }
